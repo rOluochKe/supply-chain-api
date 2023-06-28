@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getRepository, OrderByCondition  } from 'typeorm';
+import { getRepository, OrderByCondition } from 'typeorm';
 import { Item } from '../entities/Item';
 import { Event } from '../entities/Event';
 import { validateObject, extractValidationErrors } from '../util/validator';

@@ -23,6 +23,6 @@ export class Item {
   @Min(0)
   price!: number;
 
-  @OneToMany(() => Event, event => event.item)
+  @OneToMany(() => Event, (event) => event.item)
   events!: Event[];
 }

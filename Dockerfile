@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port on which the server will run
-EXPOSE 3000
+EXPOSE 4000
 
 # Set the environment variables for the database connection
 ENV DB_USERNAME=supply_chain_usr
@@ -27,5 +27,11 @@ COPY init.sql /docker-entrypoint-initdb.d/
 # Install the wait-on package globally
 RUN npm install -g wait-on
 
-# Wait for the database to be ready before running the seed script
-CMD sh -c "wait-on tcp:database:5432 && npm run seed && npm run lint && npm run format && npm start"
+# Run format during the build process
+RUN npm run format
+
+# Run lint during the build process
+RUN npm run lint
+
+# Run the seed script once during the build process
+CMD wait-on tcp:database:5432 && npm run seed && npm start

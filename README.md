@@ -29,7 +29,7 @@ This API backend app is responsible for handling endpoints related to supply cha
 2. Run docker build: `docker-compose up --build`
 3. Start API run: `docker-compose up`
 4. Stop docker: `docker-compose down`
-The API will be available at `http://localhost:3000/api`.
+The API will be available at `http://localhost:4000/api`.
 
 ## API Endpoints
 
@@ -41,4 +41,4 @@ The API will be available at `http://localhost:3000/api`.
 - `GET /items/:itemId/events` - Retrieve all events of an item
 - `GET /items/:itemId/events/last-event` - Retrieve the last event of an item
 
-For detailed request and response information, please refer to the API documentation `http://localhost:3000/api-docs`.
+For detailed request and response information, please refer to the API documentation `http://localhost:4000/api-docs`.

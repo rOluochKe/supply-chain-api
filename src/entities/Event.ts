@@ -33,6 +33,6 @@ export class Event {
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   timestamp!: Date;
 
-  @ManyToOne(() => Item, item => item.events)
+  @ManyToOne(() => Item, (item) => item.events)
   item!: Item;
 }

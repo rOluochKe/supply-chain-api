@@ -9,8 +9,8 @@
     "serve": "node dist/index.js",
     "migrate": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "revert-migrate": "ts-node ./node_modules/typeorm/cli.js migration:revert",
-    "lint": "eslint src/**/*.ts",
-    "format": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/**/*.ts --fix",
+    "format": "find src -name '*.ts' -exec prettier --write {} +",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "seed": "ts-node src/dataSeed.ts"
