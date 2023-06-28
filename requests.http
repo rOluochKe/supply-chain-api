@@ -1,0 +1,47 @@
+### Create a new item
+POST http://localhost:3000/api/items HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Item 1",
+  "colour": "Green",
+  "price": 12
+}
+
+
+### Get all items
+GET http://localhost:3000/api/items HTTP/1.1
+
+
+### Get a specific item by ID
+GET http://localhost:3000/api/items/1 HTTP/1.1
+
+
+### Update item
+PUT http://localhost:3000/api/items/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Item 2 Up",
+  "colour": "Yellow",
+  "price": 16
+}
+
+
+### Create a new event
+POST http://localhost:3000/api/items/1/events HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Event A",
+  "location": "Supplier",
+  "custodian": "John Doe"
+}
+
+
+### Get all events
+GET http://localhost:3000/api/items/1/events HTTP/1.1
+
+
+### Get last event of an item
+GET http://localhost:3000/api/items/1/last-event HTTP/1.1

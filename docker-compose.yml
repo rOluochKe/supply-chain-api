@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - database
+
+  database:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=supply_chain_usr
+      - POSTGRES_PASSWORD=@supply_chain_trace_usr23!
+      - POSTGRES_DB=supply_chain_track
+    ports:
+      - '5432:5432'
