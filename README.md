@@ -25,12 +25,11 @@ This API backend app is responsible for handling endpoints related to supply cha
 
 #### Installation
 
-1. Clone the repository: git clone `https://github.com/your-username/supply-chain-track-system.git`
-2. Install dependencies: `npm install`
-3. Set up the PostgreSQL database and update the database configuration in `src/dataSeed.ts` and `.env`.
-4. Seed the database with initial data: `npm run seed`
-5. Start the server: `npm run dev`
-The API will be available at `http://localhost:3000`.
+1. Clone the repository: `git clone git@github.com:rOluochKe/supply-chain-api.git`
+2. Run docker build: `docker-compose up --build`
+3. Start API run: `docker-compose up`
+4. Stop docker: `docker-compose down`
+The API will be available at `http://localhost:3000/api`.
 
 ## API Endpoints
 
@@ -42,4 +41,4 @@ The API will be available at `http://localhost:3000`.
 - `GET /items/:itemId/events` - Retrieve all events of an item
 - `GET /items/:itemId/events/last-event` - Retrieve the last event of an item
 
-For detailed request and response information, please refer to the API documentation `/api-docs`.
+For detailed request and response information, please refer to the API documentation `http://localhost:3000/api-docs`.
